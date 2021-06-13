@@ -6,7 +6,7 @@ https://xss-csrf-tp.herokuapp.com/men
 Pour ce niveau, j’ai décidé d’intégrer une image dans l’URL qui affiche un message d’erreur  si elle n’est pas trouvée → une popup d’erreur s’affiche https://xss-csrf-tp.herokuapp.com/level/1?page=%3Cimg%20src=%22alert%22%20onerror=%22alert(%27danger%27)%22%3E 
 
 ### Level 2 :
-* Pour ce niveau,  j’ai repris ma démarche précédente en insérant '<img src="alert" onerror="alert('danger')">' dans le champ titre du formulaire ainsi l’image qui doit être affiché n’est pas trouvée → une popup d’erreur s’affiche par contre '<script>alert(‘danger’)</script>' ne fonctionne pas
+* Pour ce niveau,  j’ai repris ma démarche précédente en insérant ```<img src="alert" onerror="alert('danger')">``` dans le champ titre du formulaire ainsi l’image qui doit être affiché n’est pas trouvée → une popup d’erreur s’affiche par contre ```<script>alert(‘danger’)</script>``` ne fonctionne pas
 * On dirait que le navigateur protége le site en effectuant un genre d’escape
 * L’API Fetch de JS effectue une requete asynchrone en utilisant un appel AJAX pour recuperer les données
 * La solution que je prefere est <img src="danger" onerror="while(true) { alert(‘danger’); }">
